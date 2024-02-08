@@ -1,0 +1,101 @@
+Summarise this jenkinsfile and the steps I need to do to implement it in bullet points 
+
+node('node') {
+
+
+    currentBuild.result = "SUCCESS"
+
+    try {
+
+       stage('Checkout'){
+
+          checkout scm
+       }
+
+       stage('Test'){
+
+         env.NODE_ENV = "test"
+
+         print "Environment will be : ${env.NODE_ENV}"
+
+         sh 'node -v'
+         sh 'npm prune'
+         sh 'npm install'
+         sh 'npm test'
+
+       }
+
+       stage('Build Docker'){
+
+            sh './dockerBuild.sh'
+       }
+
+       stage('Deploy'){
+
+         echo 'Push to Repo'
+         sh './dockerPushToRepo.sh'
+
+         echo 'ssh to web server and tell it to pull new image'
+         sh 'ssh deploy@xxxxx.xxxxx.com running/xxxxxxx/dockerRun.sh'
+
+       }
+
+       stage('Cleanup'){
+
+         echo 'prune and cleanup'
+         sh 'npm prune'
+         sh 'rm node_modules -rf'
+
+         mail body: 'project build successful',
+                     from: 'xxxx@yyyyy.com',
+                     replyTo: 'xxxx@yyyy.com',
+                     subject: 'project build successful',
+                     to: 'yyyyy@yyyy.com'
+       }
+
+
+
+    }
+    catch (err) {
+
+        currentBuild.result = "FAILURE"
+
+            mail body: "project build error is here: ${env.BUILD_URL}" ,
+            from: 'xxxx@yyyy.com',
+            replyTo: 'yyyy@yyyy.com',
+            subject: 'project build failed',
+            to: 'zzzz@yyyyy.com'
+
+        throw err
+    }
+
+}
+
+ChatGPT
+The Jenkinsfile you provided outlines a continuous integration pipeline that includes stages for checkout, testing, Docker image building, deployment, and cleanup, with error handling to notify in case of failure. Here's a summary of the steps and what you need to do to implement it:
+
+Node Specification:
+
+Runs on a Jenkins node tagged as 'node'. Ensure you have a Jenkins node with this tag.
+Initial Setup:
+
+Sets the initial build result to "SUCCESS".
+Stages:
+
+Checkout: Check out the source code from the repository.
+Test: Set up the test environment, display the Node.js version, prune and install npm packages, and run tests.
+Build Docker: Execute a script to build a Docker image.
+Deploy: Push the Docker image to a repository, then SSH into a web server to pull and run the new Docker image.
+Cleanup: Prune npm packages, remove node_modules directory, and send a success email notification.
+Error Handling:
+
+In case of any failure during the above stages, the build result is set to "FAILURE", and an email notification is sent out detailing the build error, using the environment variable ${env.BUILD_URL} for reference.
+Implementation Steps:
+
+Ensure Jenkins is installed and properly configured with access to a node tagged as 'node'.
+Verify that Jenkins has plugins or capabilities to handle the commands used (e.g., checkout scm, Docker commands, SSH).
+Create a new Pipeline job in Jenkins and use this Jenkinsfile as the pipeline script.
+Ensure the Jenkins node has necessary software installed (Node.js, npm, Docker) and access to the necessary services (source code repository, Docker registry, deployment server).
+Configure email notifications in Jenkins to send emails (make sure to replace placeholder emails and configure SMTP settings).
+Replace placeholder scripts (./dockerBuild.sh, ./dockerPushToRepo.sh, ssh deploy@xxxxx.xxxxx.com running/xxxxxxx/dockerRun.sh) with actual paths and commands as per your project setup.
+Test the pipeline by making a commit to your repository or manually triggering the build in Jenkins.
