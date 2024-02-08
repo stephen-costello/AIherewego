@@ -1,1 +1,59 @@
+Hi ChatGPT,
+
+I am looking to hire a software engineer in test, successful candidate needs to have 3+ years experience 
+
+Successful candidate must have proficient skills in 
+- Testing disciplines 
+-  Proficient in java 
+- Experience using industry standard testing framework (Selenium / playwright ect) 
+- Experience setting up jenkins jobs 
+- Good communication skills 
+- Familiar with docker 
+- Familiar with cloud services 
+
+Create me a job spec and list out 10 questions to ask in interview 
+ChatGPT
+Software Engineer in Test - Job Specification
+Position Overview:
+
+We are seeking a highly skilled and experienced Software Engineer in Test to join our dynamic team. The successful candidate will be responsible for ensuring the quality and reliability of our software products through comprehensive testing methodologies. With a focus on automation and process improvement, the candidate will play a crucial role in our development lifecycle, enhancing our ability to deliver exceptional software solutions to our clients.
+
+Key Responsibilities:
+
+Design, develop, and execute automated tests to validate the functionality, performance, and security of our software products.
+Work closely with the development team to integrate testing protocols into the software development lifecycle.
+Utilize industry-standard testing frameworks such as Selenium or Playwright to automate web application testing.
+Set up and manage Jenkins jobs for continuous integration and delivery processes.
+Develop and maintain documentation for testing procedures and protocols.
+Collaborate with the development team to identify, report, and resolve software defects.
+Stay current with the latest testing tools, strategies, and trends to continually improve testing efficiency and effectiveness.
+Assist in the deployment and configuration of applications within Docker containers.
+Leverage cloud services to optimize testing environments and processes.
+Communicate effectively with team members and stakeholders to ensure alignment on quality standards and testing outcomes.
+Qualifications:
+
+Minimum of 3 years of experience in a software testing role, with a strong emphasis on automated testing.
+Proficient in Java programming for test automation purposes.
+Solid experience with industry-standard testing frameworks (e.g., Selenium, Playwright).
+Experience in setting up and managing Jenkins jobs for CI/CD processes.
+Excellent communication skills, with the ability to clearly articulate testing needs and outcomes.
+Familiarity with Docker and containerization principles.
+Understanding of cloud services (AWS, Azure, Google Cloud) and how they can be utilized in testing environments.
+Bachelor's degree in Computer Science, Engineering, or related field is preferred.
+Interview Questions:
+Can you describe your experience with developing and executing automated tests using Java? Please provide examples of projects you've worked on.
+How do you approach writing test cases for a new feature? Can you walk us through your process from requirement gathering to test execution?
+Describe your experience with Selenium or Playwright. What are some challenges you've faced while using these frameworks and how did you overcome them?
+Can you explain how you have integrated automated tests into a CI/CD pipeline, specifically using Jenkins?
+How do you ensure your test cases are comprehensive and cover all necessary aspects of functionality, performance, and security?
+Describe a time when you identified a significant bug during the testing phase. How did you communicate this to the development team and what was the outcome?
+In your experience, how have you utilized Docker in the context of testing? Can you provide an example of when this was particularly beneficial?
+How do you stay updated with the latest testing tools and technologies? Can you mention a few resources you frequently use?
+Discuss your experience with cloud services in testing environments. How have you leveraged these services to improve testing processes or outcomes?
+How do you prioritize tasks and manage your workload in a fast-paced development environment, especially when dealing with multiple projects or tight deadlines?
+This job specification and interview questions are designed to help you identify candidates who are not only technically proficient but also capable of collaborating effectively with your team and contributing to the ongoing improvement of your testing processes.
+
+
+
+
 
