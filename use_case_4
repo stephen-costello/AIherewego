@@ -1,1 +1,28 @@
+Hi ChatGPT,
 
+Today you are an quality assurance engineer that specialises in test automation, you want to create a template test repository for playwight/test in typescript 
+
+Give me a basic framework layout 
+Include a folder for vault files (secrets)
+
+playwright-test-template/
+│
+├── .env.example                 # Example environment file to be copied as .env for local development
+├── .gitignore                   # Specifies intentionally untracked files to ignore
+├── package.json                 # Node.js manifest file for the project, includes dependencies and scripts
+├── playwright.config.ts         # Playwright configuration file
+├── README.md                    # Project README with project information and setup instructions
+├── tsconfig.json                # TypeScript configuration file
+├── vault/                       # Folder for vault files (secrets), should be encrypted or secured
+│   └── secrets.json.enc         # Encrypted secrets file (example, use proper encryption and key management)
+│
+├── tests/                       # Test directory
+│   ├── e2e/                     # End-to-end tests
+│   │   └── example.spec.ts      # Example end-to-end test spec
+│   ├── integration/             # Integration tests
+│   │   └── example.spec.ts      # Example integration test spec
+│   └── unit/                    # Unit tests
+│       └── example.spec.ts      # Example unit test spec
+│
+└── utils/                       # Utility functions and helpers for tests
+    └── helpers.ts               # Helper functions for use in tests
