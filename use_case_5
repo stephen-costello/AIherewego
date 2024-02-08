@@ -1,1 +1,10 @@
+The guide provides a comprehensive overview of conducting chaos testing using LoadRunner Professional, emphasizing the integration with Gremlin for simulating various failure scenarios. Key points include:
 
+Chaos engineering's importance for infrastructure resilience, simulating failures to prepare for a wide range of issues.
+Prerequisites for the tutorial include LoadRunner Professional, Gremlin, the OpenText™ VuGen tool, and a web application for testing.
+Steps to create and configure a virtual user simulation script using LoadRunner Professional's VuGen.
+Creation of Gremlin scenarios for CPU and latency attacks to assess application performance under stress.
+Execution of chaos tests through LoadRunner Controller, including setup for virtual users and analysis of test results.
+The results analysis section describes how to interpret the impact of chaos testing on application performance, showcasing the relationship between throughput and response time during chaos events.
+The conclusion highlights chaos engineering's role in enhancing system resilience and encourages integrating chaos testing into development and testing cycles.
+This guide is designed for test engineers and developers interested in applying chaos engineering principles to improve system robustness by using LoadRunner Professional and Gremlin.
