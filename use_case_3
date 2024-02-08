@@ -1,1 +1,51 @@
+Convert these BDD test cases in playwright/test javascript code, add in a TODO: note at end of each test cases stating that this is sample test code and will need refinement 
 
+const { test, expect } = require('@playwright/test');
+
+test.describe('Disclaimer Acceptance', () => {
+
+  test('Viewing the disclaimer', async ({ page }) => {
+    await page.goto('your-disclaimer-page-url'); // Change to your actual disclaimer page URL
+    await expect(page.locator('text=Please read before continuing')).toBeVisible();
+    await expect(page.locator('text=This is a legal disclaimer and will be read aloud')).toBeVisible();
+    await expect(page.locator('text=I agree to terms')).toBeVisible();
+    const nextButton = page.locator('button', { hasText: 'Next' }); // Adjust selector as necessary
+    await expect(nextButton).toBeVisible();
+    await expect(nextButton).toBeDisabled();
+    // TODO: This is sample test code and will need refinement based on actual selectors and page URLs.
+  });
+
+  test('Tick box is unticked by default', async ({ page }) => {
+    await page.goto('your-disclaimer-page-url');
+    const checkBox = page.locator('input[type="checkbox"]'); // Adjust selector as necessary
+    await expect(checkBox).not.toBeChecked();
+    // TODO: This is sample test code and will need refinement based on actual selectors and page URLs.
+  });
+
+  test('Next button remains disabled when tick box is unticked', async ({ page }) => {
+    await page.goto('your-disclaimer-page-url');
+    const nextButton = page.locator('button', { hasText: 'Next' }); // Adjust selector as necessary
+    await expect(nextButton).toBeDisabled();
+    // TODO: This is sample test code and will need refinement based on actual selectors and page URLs.
+  });
+
+  test('Ticking the tick box enables the Next button', async ({ page }) => {
+    await page.goto('your-disclaimer-page-url');
+    const checkBox = page.locator('input[type="checkbox"]'); // Adjust selector as necessary
+    await checkBox.check();
+    const nextButton = page.locator('button', { hasText: 'Next' }); // Adjust selector as necessary
+    await expect(nextButton).toBeEnabled();
+    // TODO: This is sample test code and will need refinement based on actual selectors and page URLs.
+  });
+
+  test('Unticking the tick box after it has been ticked disables the Next button again', async ({ page }) => {
+    await page.goto('your-disclaimer-page-url');
+    const checkBox = page.locator('input[type="checkbox"]'); // Adjust selector as necessary
+    await checkBox.check();
+    await checkBox.uncheck();
+    const nextButton = page.locator('button', { hasText: 'Next' }); // Adjust selector as necessary
+    await expect(nextButton).toBeDisabled();
+    // TODO: This is sample test code and will need refinement based on actual selectors and page URLs.
+  });
+
+});
