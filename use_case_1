@@ -1,1 +1,112 @@
+Today you are a quality engineer that is looking to create json data for test purposes
 
+Here is what I want to test, I need to test First Name, Last Name, Address, Email,  in my json file
+
+great, expand to 20 entries, add in zip code and bulk up address
+
+Great, reduce to 10 entries, add in some long text (25) and some blank data values also in the mix
+
+{
+  "users": [
+    {
+      "first_name": "John",
+      "last_name": "Doe",
+      "address": "123 Main St, Apt 101",
+      "city": "Anytown",
+      "state": "CA",
+      "zip_code": "12345",
+      "email": "john.doe@example.com",
+      "notes": "Lorem ipsum dolor sit amet."
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "address": "",
+      "city": "Smallville",
+      "state": "NY",
+      "zip_code": "",
+      "email": "jane.smith@example.com",
+      "notes": "Consectetur adipiscing elit."
+    },
+    {
+      "first_name": "Alice",
+      "last_name": "Johnson",
+      "address": "789 Oak St, Unit 303",
+      "city": "Metropolis",
+      "state": "",
+      "zip_code": "13579",
+      "email": "",
+      "notes": "Sed do eiusmod tempor."
+    },
+    {
+      "first_name": "Michael",
+      "last_name": "Williams",
+      "address": "1011 Maple St, Apt 404",
+      "city": "",
+      "state": "OH",
+      "zip_code": "24680",
+      "email": "michael.williams@example.com",
+      "notes": ""
+    },
+    {
+      "first_name": "Emily",
+      "last_name": "Brown",
+      "address": "1213 Pine St, Suite 505",
+      "city": "Rivertown",
+      "state": "WA",
+      "zip_code": "",
+      "email": "emily.brown@example.com",
+      "notes": "Ut enim ad minim veniam."
+    },
+    {
+      "first_name": "David",
+      "last_name": "",
+      "address": "1415 Cedar St, Unit 606",
+      "city": "Lakeside",
+      "state": "FL",
+      "zip_code": "86420",
+      "email": "david.martinez@example.com",
+      "notes": "Quis nostrud exercitation."
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Anderson",
+      "address": "1617 Birch St, Apt 707",
+      "city": "Mountainview",
+      "state": "CO",
+      "zip_code": "",
+      "email": "sarah.anderson@example.com",
+      "notes": ""
+    },
+    {
+      "first_name": "James",
+      "last_name": "Taylor",
+      "address": "1819 Walnut St, Suite 808",
+      "city": "",
+      "state": "OR",
+      "zip_code": "67890",
+      "email": "",
+      "notes": "Duis aute irure dolor."
+    },
+    {
+      "first_name": "",
+      "last_name": "Thomas",
+      "address": "2021 Oak St, Unit 909",
+      "city": "Seaview",
+      "state": "CA",
+      "zip_code": "13579",
+      "email": "jessica.thomas@example.com",
+      "notes": ""
+    },
+    {
+      "first_name": "Daniel",
+      "last_name": "Wilson",
+      "address": "2223 Maple St, Apt 1010",
+      "city": "",
+      "state": "",
+      "zip_code": "",
+      "email": "daniel.wilson@example.com",
+      "notes": "Excepteur sint occaecat."
+    }
+  ]
+}
