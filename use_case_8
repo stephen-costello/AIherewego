@@ -1,1 +1,19 @@
+i ChatGPT,
 
+Create me a document of the top 12 most used playwright/test console commands
+
+Create in table format with command on the left and description of the command on the right 
+
+Command	Description
+npm install <package>	Installs a package locally in the current project.
+npm install -g <package>	Installs a package globally on your system.
+npm init	Initializes a new Node.js project, creating a package.json file.
+npm start	Starts the application defined in the start script within package.json.
+npm run <script>	Executes a script defined in the scripts section of package.json.
+npm test	Executes the test script defined in the scripts section of package.json.
+npm uninstall <package>	Uninstalls a package from the current project.
+npm update <package>	Updates a package to its latest version.
+npm outdated	Checks for outdated dependencies in the current project.
+npm audit	Performs a security audit on the dependencies in the current project.
+npm list	Lists all installed packages and their dependencies.
+npx <command>	Executes a command installed in a package, without needing to install it globally or locally.
