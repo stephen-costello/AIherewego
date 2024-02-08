@@ -1,0 +1,27 @@
+Hi ChatGPT, 
+
+Today I want you to be a software engineer in test, I have a front end with a text box that creates a post to an API service 
+These characters will throw an error ^[a-zA-Z0-9]+$
+I have error handling implemented on front end 
+
+Create me a test matrix to make sure error is displayed on front end if these characters are typed in 
+
+Creating a test matrix for the scenario you described involves considering various inputs that will trigger the error handling on the front end due to the regular expression ^[a-zA-Z0-9]+$. This regular expression matches inputs that consist only of alphanumeric characters (letters and numbers), from the start (^) to the end ($) of the string. Inputs containing characters outside this range should trigger an error. Here's a test matrix that covers various cases:
+
+Test Case ID	Description	Input	Expected Result
+1	All lowercase letters	abcde	Pass (No error)
+2	All uppercase letters	ABCDE	Pass (No error)
+3	Mixed case letters	AbCdE	Pass (No error)
+4	Numeric characters only	12345	Pass (No error)
+5	Alphanumeric, mixed case	A1b2C3	Pass (No error)
+6	Single special character - dash	-	Fail (Error displayed)
+7	Single special character - underscore	_	Fail (Error displayed)
+8	Single special character - space	(space)	Fail (Error displayed)
+9	Alphanumeric with special character - dash	abc-123	Fail (Error displayed)
+10	Alphanumeric with spaces	abc 123	Fail (Error displayed)
+11	Special characters only	!@#$%	Fail (Error displayed)
+12	Alphanumeric with newline	abc\n123 (where \n is newline)	Fail (Error displayed)
+13	Empty input	`` (empty string)	Special case, depends on requirements (could pass or fail)
+14	Very long alphanumeric input	A1b2C3... (very long input)	Pass (No error), but test for performance or input length limit
+15	Very long input with special characters	A1b2C3...!@#$% (very long input)	Fail (Error displayed), test for performance with error handling
+This matrix tests a variety of inputs, including valid alphanumeric strings, inputs with special characters that should trigger errors, spaces, newlines, and edge cases like empty inputs or very long strings. It's essential to adapt the matrix based on the specific behaviors of your front-end application and any additional requirements or edge cases you might have. Also, consider testing for error message clarity, ensuring that it appropriately guides the user to correct the input, and for the UI's ability to handle and display the error state effectively.
