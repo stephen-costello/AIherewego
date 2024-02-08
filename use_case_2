@@ -1,1 +1,37 @@
+Today I want you to create BDD test cases for my feature, here are the requirements
 
+- Disclaimer will have a header of 'Please read before continuing'
+- Disclaimer will have a boy of 'This is a legal disclaimer and will be read alound'
+- Disclaimer will have a tck box below that can be ticked or unticked
+- Tick box will have a label to the left of 'I agree to terms' 
+- Next button will not be available while tick box is not ticked (greyed out)
+- Next button will become available when tick box is ticked
+
+
+Feature: Disclaimer Acceptance
+Scenario: Viewing the disclaimer
+
+Given the user navigates to the disclaimer page
+Then they should see a header with the text "Please read before continuing"
+And a body text stating "This is a legal disclaimer and will be read aloud"
+And a tick box with the label "I agree to terms" to the left
+And the Next button is visible but greyed out
+Scenario: Tick box is unticked by default
+
+Given the user navigates to the disclaimer page
+Then the tick box under the disclaimer is unticked by default
+Scenario: Next button remains disabled when tick box is unticked
+
+Given the user views the disclaimer
+And the tick box is unticked
+Then the Next button remains greyed out and is not clickable
+Scenario: Ticking the tick box enables the Next button
+
+Given the user views the disclaimer
+When they tick the "I agree to terms" tick box
+Then the Next button becomes clickable and is no longer greyed out
+Scenario: Unticking the tick box after it has been ticked disables the Next button again
+
+Given the user has ticked the "I agree to terms" tick box
+When they untick the tick box
+Then the Next button becomes greyed out and is not clickable again
